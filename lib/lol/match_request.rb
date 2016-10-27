@@ -12,5 +12,9 @@ module Lol
     def get match_id
       perform_request(api_url("match/#{match_id}"))
     end
+
+    def for_tournament(match_id, query)
+      perform_request(api_url("match/for-tournament/#{match_id}", query))
+    end
   end
 end
